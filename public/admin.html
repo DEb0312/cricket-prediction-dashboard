@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Enter Match Result</h2>
+
+<select id="match">
+
+<option>Semi Final 1</option>
+<option>Semi Final 2</option>
+<option>Final</option>
+
+</select>
+
+<h3>Highest Run Scorer</h3>
+
+<input id="run1">
+<input id="run2">
+
+<h3>Highest Wicket Taker</h3>
+
+<input id="wk1">
+<input id="wk2">
+
+<h3>First Innings Score</h3>
+
+<input id="score">
+
+<button onclick="submitResult()">Calculate Leaderboard</button>
+
+<p id="status"></p>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

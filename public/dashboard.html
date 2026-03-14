@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Prediction Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>T20 World Cup 2026 Predictions</h2>
+
+<select id="match">
+
+<option>Semi Final 1</option>
+<option>Semi Final 2</option>
+<option>Final</option>
+
+</select>
+
+<h3>Highest Run Scorer</h3>
+
+<input id="run1" placeholder="Team 1 Player">
+<input id="run2" placeholder="Team 2 Player">
+
+<h3>Highest Wicket Taker</h3>
+
+<input id="wk1" placeholder="Team 1 Player">
+<input id="wk2" placeholder="Team 2 Player">
+
+<h3>First Innings Score Range</h3>
+
+<input id="scoreLow" placeholder="Lower Score (eg 150)">
+<input id="scoreHigh" placeholder="Higher Score (eg 180)">
+
+<button onclick="submitPrediction()">Submit</button>
+
+<p id="status"></p>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
