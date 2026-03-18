@@ -30,3 +30,10 @@ const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
     console.log("Server running on port", PORT)
 })
+
+const Prediction = require("./models/Prediction")
+
+app.get("/fix-processed", async (req, res) => {
+  await Prediction.updateMany({}, { processed: false })
+  res.send("All predictions updated with processed=false")
+})
