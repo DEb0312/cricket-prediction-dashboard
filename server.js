@@ -37,3 +37,12 @@ app.get("/fix-processed", async (req, res) => {
   await Prediction.updateMany({}, { processed: false })
   res.send("All predictions updated with processed=false")
 })
+
+const User = require("./models/User")
+const Prediction = require("./models/Prediction")
+
+app.get("/reset-all", async (req, res) => {
+  await User.updateMany({}, { score: 0 })
+  await Prediction.deleteMany({})
+  res.send("All data reset")
+})
